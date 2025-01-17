@@ -40,9 +40,11 @@
             width: 50%;
         }
 
-        /*styling the View Products button and the Read More Blogs button*/
+        /*styling the View Products button, Read More Blogs button and View full reference button*/
         .view_products input,
-        .blogs_section input {
+        .blogs_section input,
+        .research_button input,
+        .about_us_button input {
             background: #e0cb98;
             padding: 12px;
             /*gap between the button border and the text inside*/
@@ -55,15 +57,25 @@
             /*cursor turns pointer when hovered*/
         }
 
-        /*setting background for the View Products and Blogs buttons*/
+        /*setting background for the View Products, View full references and Blogs buttons*/
         .view_products input:hover,
-        .blogs_section input:hover {
+        .blogs_section input:hover,
+        .research_button input:hover,
+        .about_us_button input:hover {
             background: #e4c57d;
         }
 
         .blogs_section input {
             margin: 30px 0 0 30px;
             /*gap in top-right-bottom-left of the button*/
+        }
+
+        /*styling the headings of overview of different pages*/
+        .heading {
+            color: white;
+            font-family: sans-serif;
+            font-size: 40px;
+            text-align: center;
         }
 
         /*styling the characteristics section*/
@@ -201,6 +213,52 @@
             justify-content: center;
             /*it is an alignment property that put the contents in the center of the container*/
         }
+
+        .research {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .research_button {
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .references {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .research img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .about_us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto 30px auto;
+            padding: 0 200px;
+        }
+
+        .about_us p {
+            text-align: center;
+            color: #fffaef;
+            font-family: sans-serif;
+            font-size: 22px;
+        }
+
+        .about_us_button {
+            display: flex;
+            gap: 30px;
+        }
     </style>
 </head>
 
@@ -265,7 +323,7 @@
 
 
     <section class="blogs_section"> <!--blogs-->
-        <h1 style="color:white; font-family:sans-serif;font-size: 40px;text-align: center;">Read our Blogs</h1>
+        <h1 class="heading">Read our Blogs</h1>
 
         <div class="blogs"> <!--this div contains the blogs boxes-->
 
@@ -302,7 +360,7 @@
 
 
     <section class="featured_watches" style="padding:20px;"> <!--Some stand out watches collection-->
-        <h1 style="color:white; font-family:sans-serif;font-size: 40px;text-align: center;">Featured collection</h1>
+        <h1 class="heading">Featured collection</h1>
 
         <div class="watch"><!--a container for specific watch-->
             <div class="watch_text"><!--container for text-->
@@ -336,7 +394,32 @@
             </div>
             <img src="Images/Product_images/gurkha.png" alt="gurkha urban chloro black watch"><!--image of the watch-->
         </div>
+    </section>
 
+    <section class="research"><!--Overview of the research page-->
+        <h1 class="heading">Research and References</h1>
+        <p style="color: #fffaef;font-family: sans-serif;font-size: 25px;">These are some of the references taken in
+            this
+            website. Click on the image to view their
+            sites.</p>
+        <div class="references">
+            <a href="https://www.alibaba.com/" target="_blank"><img src="Images/Alibaba.png" alt="Alibaba"></a>
+            <a href="https://www.pexels.com/" target="_blank"><img src="Images/Pexels.png" alt="Pexels"></a>
+            <a href="https://www.rolex.com/en-us" target="_blank"><img src="Images/Rolex.jpg" alt="Rolex"></a>
+        </div>
+        <div class="research_button">
+            <input type="button" value="View full references" onclick="research_page_call()">
+        </div>
+    </section>
+
+    <section class="about_us">
+        <h1 class="heading">About us</h1>
+        <p>We are a team of five members implementing
+            our skills in designing Phoenix website. The coordination and determination of our team members have made
+            Phoenix an appealing site.</p>
+        <div class="about_us_button">
+            <input type="button" value="Get to know us" onclick="aboutus_page_call()">
+        </div>
     </section>
 
 
@@ -358,6 +441,14 @@
             window.location.href = 'Pages/contact.html';
         }
         //the contact page call is not called externally through script.js here because of the path issue
+        function research_page_call() {
+            window.location.href = 'Pages/research.html';
+        }
+        //research page redirection button
+        function aboutus_page_call() {
+            window.location.href = 'Pages/about.html';
+        }
+        //about us page redirection button
     </script>
     <script src="script/scripts.js"></script>
 </body>
