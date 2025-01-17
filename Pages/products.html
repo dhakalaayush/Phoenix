@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Phoenix Products
+  </title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../Images/phoenix.png">
+  <!--favicon: the picture in the browser tab-->
+  <style>
+    /*styling the div container class*/
+    .container {
+      display: flex;
+      overflow-x: auto;
+      width: 90%;
+      margin: 50px;
+    }
+
+    /*customization of horizontal scrollbar*/
+    .container::-webkit-scrollbar {
+      height: 5px;
+      background: none;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+      background: #b49363;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #e0cb98;
+      font-size: 40px;
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .watch {
+      min-width: 250px;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 5px 5px 5px 5px rgb(19, 19, 19);
+    }
+
+    .watch img {
+      height: 250px;
+    }
+
+    .watch h2 {
+      font-size: 25px;
+      font-family: sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .watch h4 {
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .watch p {
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .watch input {
+      background: #b49363;
+      padding: 15px;
+      border: solid 0;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .filled_star {
+      color: #b49363;
+    }
+
+    .unfilled_star {
+      color: #e6d9bc;
+    }
+  </style>
+</head>
+
+<body>
+  <header><!--header section declaration-->
+    <img src="../Images/phoenix.png" alt="logo" class="logo">
+    <ul><!--unordered list-->
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="products.html" style="color:#e0cb98;">
+          Products
+        </a></li>
+      <li><a href="../Pages/blog.html">Blogs</a></li>
+      <li><a href="research.html">
+          Research</li>
+      </a>
+      <li><a href="../Pages/about.html">About us
+        </a></li>
+      <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+    </ul>
+  </header>
+
+
+  <h1>
+    Classic watches
+  </h1>
+
+  <div class="container"><!--this div contains all classsic watches products-->
+
+    <div class="watch"><!--a container for a watch-->
+      <img src="../Images/Product_images/casio.png">
+      <h2>
+        Casio A168WEGB-1B
+      </h2>
+      <p>Black and Gold </p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>8,800</strike></h4><!--the strike tag cuts the text-->
+      <input type="button" value="Buy at NRP 8,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+    </div>
+
+
+    <div class="watch">
+      <img src="../Images/Product_images/gurkha.png">
+      <h2>
+        Gorkha Urban Chloro Black Dial
+      </h2>
+      <p>Sapphire Crystal Glass</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>16,000</strike></h4>
+      <input type="button" value="Buy at NRP 14,850"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/cartier.png">
+      <h2>
+        Cartier Ronde Louis Rose
+      </h2>
+      <p>Solid 18k gold</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>72,000</strike></h4>
+      <input type="button" value="Buy at NRP 67,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/classique_swiss_watch.png">
+      <h2>
+        Classique Swiss Watch - 0436GFLEXI
+      </h2>
+      <p>Gold Plated Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>35,000</strike></h4>
+      <input type="button" value="Buy at NRP 32,502"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+
+    <div class="watch">
+      <img src="../Images/Product_images/classique_lincoln.webp">
+      <h2>
+        Classique Lincoln Watch
+      </h2>
+      <p>Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>78,000</strike></h4>
+      <input type="button" value="Buy at NRP 70,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/classique_theo.webp">
+      <h2>
+        Classique Theo Watch
+      </h2>
+      <p>Gold Plated Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>32,000</strike></h4>
+      <input type="button" value="Buy at NRP 28,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/axel.webp">
+      <h2>
+        Classique Axel - 8002B-XBKA
+      </h2>
+      <p>Black Plated Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>1,90,000</strike></h4>
+      <input type="button" value="Buy at NRP 1,87,500"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/laura_swiss.webp">
+      <h2>
+        Laura Swiss Quartz Watch
+      </h2>
+      <p>Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>41,500</strike></h4>
+      <input type="button" value="Buy at NRP 45,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/leonardo_gold.webp">
+      <h2>
+        Leonardo Gold Plated Watch
+      </h2>
+      <p>Gold Plated Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>39,000</strike></h4>
+      <input type="button" value="Buy at NRP 37,500"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/aviator.webp">
+      <h2>
+        Aviator - 8000W-XKK2
+      </h2>
+      <p>Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>3,00,000</strike></h4>
+      <input type="button" value="Buy at NRP 2,85,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+  </div>
+
+  <h1>
+    Digital Watches
+  </h1>
+
+  <div class="container"><!--this div contains all digital watches products-->
+
+    <div class="watch">
+      <img src="../Images/Product_images/apple10.png">
+      <h2>
+        Apple Watch Series 10
+      </h2>
+      <p>GPS + Cellular</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>68,000</strike></h4><!--the strike tag cuts the text-->
+      <input type="button" value="Buy at NRP 62,482"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/apple9.png">
+      <h2>
+        Apple Watch Series 9
+      </h2>
+      <p>Aluminium, Stainless Steel</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>45,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 41,299"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy7.png">
+      <h2>
+        Samsung Galaxy Series 7
+      </h2>
+      <p>AI powered</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>36,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 34,499"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy6.png">
+      <h2>
+        Samsung Galaxy Series 6
+      </h2>
+      <p>Bluetooth, 40mm</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>34,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 33,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy5.png">
+      <h2>
+        Samsung Galaxy Series 5
+      </h2>
+      <p>Bluetooth, 44m</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>32,128</strike></h4>
+
+      <input type="button" value="Buy at NRP 29,999"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy4.png">
+      <h2>
+        Samsung Galaxy Series 4
+      </h2>
+      <p>GPS and Bluetooth</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>28,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 25,464"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/victor2.png">
+      <h2>
+        Noise ColorFit Victor 2
+      </h2>
+      <p>Bluetooth, Water resistant</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>3,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 2,499"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/ULTIMA.webp">
+      <h2>
+        Ultima Watch Flex - Fitness watch
+      </h2>
+      <p>100+ sports modes</p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>5,500</strike></h4>
+
+      <input type="button" value="Buy at NRP 4,100"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/cmf.webp">
+      <h2>
+        CMF WatchPro 2 - Health Companion
+      </h2>
+      <p>120 Sport Modes
+      </p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>20,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 18,400"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+
+    <div class="watch">
+      <img src="../Images/Product_images/aura3.webp">
+      <h2>
+        HiFuture Aura Smartwatch
+      </h2>
+      <p>1.04’ AMOLED Display
+      </p>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>22,500</strike></h4>
+      <input type="button" value="Buy at NRP 19,200"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Phoenix 2025. All rights reserved.</p>
+  </footer>
+  <script src="../script/scripts.js"></script>
+
+
+</body>
+
+</html>

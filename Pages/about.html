@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+    <title>About us</title>
+</head>
+
+<body>
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: Verdana;
+        }
+
+        .slider {
+            width: 90%;
+            margin: auto auto;
+            height: 870px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slides {
+            display: flex;
+            gap: 50px;
+            width: max-content;
+            padding: 0px 200px;
+            overflow-x: auto;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            width: 800px;
+            height: 670px;
+            padding: 0px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0px 0px 5px 10px rgb(19, 19, 19);
+            /*put shadow around the box: 0 horizontal offset, 0 vertical offset, 5px blur radius, 10px spread radius and the color*/
+        }
+
+        .slider img {
+            border-radius: 50%;
+            border: 2px solid #9a7a50;
+            height: 275px;
+            width: 275px;
+            margin: 25px 30px 0px 30px;
+            object-fit: cover;
+        }
+
+        .certificate {
+            position: absolute;
+            top: 170px;
+            right: 50px;
+        }
+
+        .slides::-webkit-scrollbar {
+            background-color: transparent;
+            height: 7px;
+        }
+
+        .slides::-webkit-scrollbar-thumb {
+            background-color: #9a7a50;
+            border-radius: 50px;
+        }
+    </style>
+    <header><!--the header tab-->
+        <img src="../Images/phoenix.png" alt="logo" class="logo">
+        <ul><!--Items in the header tab-->
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Pages/products.html">
+                    Products
+                </a></li>
+            <li><a href="../Pages/blog.html">Blogs</a></li>
+            <li><a href="../Pages/research.html">
+                    Research</li>
+            </a>
+            <li><a href="../Pages/about.html" style="color:#e0cb98;">About us
+                </a></li>
+            <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+        </ul>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <div class="info">
+                <img src="../Images//About-us_images/Aayush.jpg" alt="Picture of Aayush">
+                <p>
+                <h2 style="text-align: center; margin-top: 0px;">Aayush Dhakal</h2>
+                Hi, I am Aayush. I am the leader of this group. I studied in Gothatar English Seconday School
+                up until my 10th and then completed my 10+2 from Xavier International College. I have foundational
+                knwoledge of python, java and web design (HTML and CSS). In this project my
+                contribution is the Home page.<br>
+                <a href="javascript:void(0)" onclick="openimg()"
+                    style="color: #9a7a50; margin: 20px 0px; text-decoration: none; text-align: center;">View a
+                    certiificate
+                    that I received</a>
+                <div class="certificate" id="certificate" style="display: none;">
+                    <img style="border-radius: 0%; width: 70%; height: 70%; border: 5px solid #9a7a50;"
+                        src="../Images/About-us_images/cs50.png">
+                    <button class="close_btn" onclick="closeimg()"
+                        style="height: 50%; border-radius: 5px; background-color: white; color: #9a7a50; border: 2px solid #9a7a50; font-weight: 550;">X</button>
+                </div>
+                </p>
+            </div>
+            <div class="info">
+                <img src="../Images/About-us_images/Prasun.png" alt="Picture of Prasun">
+                <p>
+                <h2 style="text-align: center; margin-top: 0px;">Prasun Purja</h2>
+                My name is Prasun Purja. I studied in Triyog High School
+                up until my 10th and then completed my 10+2 from Uniglobe Secondary School. I have basic knowledge of
+                python, java, html, css and
+                javascript. I have foundational knowledge in said languages and have also completed projects on my own.
+                In this project my
+                contribution is the About us page and Contact form.</p>
+            </div>
+            <div class="info">
+                <img src="../Images/About-us_images/Shreya.png" alt="Picture of Shreya">
+                <p>
+                <h2 style="text-align: center; margin-top: 0px;">Shreya Glan Tamang</h2>
+                My name is Shreya Glan Tamang. I studied in Eastern Star Boarding School
+                up until my 10th and then completed my 10+2 from Suryodaya English Secondary School. In this project my
+                contribution is the Research page. I am a beginner lever programmer and this project was my first
+                experience in
+                such type of project building and coding. I was able to learn a lot from this course work.
+                </p>
+            </div>
+            <div class="info">
+                <img src="../Images/About-us_images/Sandip.jpg" alt="Picture of Sandip">
+                <p>
+                <h2 style="text-align: center; margin-top: 0px;">Sandip Rai</h2>
+                Hi, I am Sandip. I studied in Golden Peak High School
+                up until my 10th and then completed my 10+2 from Reliance International Academy. Currently I am learning
+                java, html and css.
+                I have keen interest in cyber security and coding and is why I have joined this course. In this project
+                my
+                contribution is the Blog page. This course work has proved to be every fruitful as I have learned many
+                things.</p>
+            </div>
+
+            <div class="info">
+                <img src="../Images/About-us_images/Saijna.jpeg" alt="Picture of Sajina">
+                <p>
+                <h2 style="text-align: center; margin-top: 0px;">Sajina Jirel</h2>
+                I am Sajina Jirel and I am an active member of this group. I studied in Sagarmatha Secondary
+                Boarding School, from here
+                I passed my SEE and then later joined Global College of Management for my 10+2. In this coursework my
+                contribution is the products page.
+                This course work is my first time experience in such type of project building. It ended up being very
+                fruitful because I was able to
+                learn alot about web development.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer><!--footer section-->
+        <p>&copy; Phoenix 2025. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openimg() {
+            document.getElementById('certificate').style.display = "flex";
+        }
+
+        function closeimg() {
+            document.getElementById('certificate').style.display = "none";
+        }
+    </script>
+    <script src="../script/scripts.js"></script>
+</body>
+
+</html>
