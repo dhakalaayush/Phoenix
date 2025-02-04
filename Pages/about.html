@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+    <title>About us</title>
+</head>
+
+<body>
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: Verdana;
+        }
+
+        .slider {
+            width: 90%;
+            margin: auto auto;
+            height: 870px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slides {
+            display: flex;
+            gap: 50px;
+            width: max-content;
+            padding: 0px 200px;
+            overflow-x: auto;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            width: 800px;
+            height: 620px;
+            padding: 0px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0px 0px 5px 10px rgb(19, 19, 19);
+            /*put shadow around the box: 0 horizontal offset, 0 vertical offset, 5px blur radius, 10px spread radius and the color*/
+        }
+
+        .slider img {
+            border-radius: 50%;
+            border: 2px solid #9a7a50;
+            height: 275px;
+            width: 275px;
+            margin: 25px 30px 50px 30px;
+            object-fit: cover;
+        }
+
+        .slides::-webkit-scrollbar {
+            background-color: transparent;
+            height: 7px;
+        }
+
+        .slides::-webkit-scrollbar-thumb {
+            background-color: #9a7a50;
+            border-radius: 50px;
+        }
+    </style>
+    <header><!--the header tab-->
+        <img src="../Images/phoenix.png" alt="logo" class="logo">
+        <nav>
+            <ul><!--Items in the header tab-->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Pages/products.html">
+                        Products
+                    </a></li>
+                <li><a href="../Pages/blog.html">Blogs</a></li>
+                <li><a href="../Pages/research.html">
+                        Research</li>
+                </a>
+                <li><a href="../Pages/about.html" style="color:#e0cb98;">About us
+                    </a></li>
+                <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <div class="info">
+                <a href="Portfolio/aayush.html" target="_blank">
+                    <img src="../Images//About-us_images/Aayush.jpg" alt="Picture of Aayush">
+                </a>
+                <h2 style="text-align: center; margin-top: 0px;">Aayush Dhakal</h2>
+                <p>Click on my image to view my portfolio.</p>
+            </div>
+            <div class="info">
+                <a href="Portfolio/prasun.html" target="_blank">
+                    <img src="../Images/About-us_images/Prasun.png" alt="Picture of Prasun">
+                </a>
+                <h2 style="text-align: center; margin-top: 0px;">Prasun Purja</h2>
+                <p>Click on my image to view my portfolio.</p>
+            </div>
+            <div class="info">
+                <a href="Portfolio/shreya.html" target="_blank">
+                    <img src="../Images/About-us_images/Shreya.png" alt="Picture of Prasun">
+                </a>
+                <h2 style="text-align: center; margin-top: 0px;">Shreya Glan Tamang</h2>
+                <p>Click on my image to view my portfolio.</p>
+            </div>
+            <div class="info">
+                <a href="Portfolio/sandip.html" target="_blank">
+                    <img src="../Images/About-us_images/Sandip.jpg" alt="Picture of Sandip">
+                </a>
+                <h2 style="text-align: center; margin-top: 0px;">Sandip Rai</h2>
+                <p>Click on my image to view my portfolio.</p>
+            </div>
+
+            <div class="info">
+                <a href="Portfolio/sajina.html" target="_blank">
+                    <img src="../Images/About-us_images/Saijna.jpeg" alt="Picture of Sajina">
+                </a>
+                <h2 style="text-align: center; margin-top: 0px;">Sajina Jirel</h2>
+                <p>Click on my image to view my portfolio.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer><!--footer section-->
+        <p>&copy; Phoenix 2025. All rights reserved.</p>
+    </footer>
+    <script src="../script/scripts.js"></script>
+</body>
+
+</html>

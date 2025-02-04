@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Dhakal</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" href="../../Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .certificate {
+            position: absolute;
+            top: 170px;
+            right: 50px;
+        }
+    </style>
+    <header><!--the header tab-->
+        <img src="../../Images/phoenix.png" alt="logo" class="logo">
+        <nav>
+            <ul><!--Items in the header tab-->
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../products.html">
+                        Products
+                    </a></li>
+                <li><a href="../blog.html">Blogs</a></li>
+                <li><a href="../research.html">
+                        Research</li>
+                </a>
+                <li><a href="../about.html">About us
+                    </a></li>
+                <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container_box">
+        <img src="../../Images\About-us_images\Aayush.jpg">
+        <div class="intro">
+            <h1 style="margin-bottom: 0px;">Aayush Dhakal</h1>
+            <span style="margin: 0px 0px 200px 0px;">Leader</span><br><br>
+            <p>Hi, I am Aayush. I am the leader of this group and I consider myself a beginner coder. For this
+                particular course work
+                my contribution was the Home page. I have given my best effort to lead my team towards success in this
+                course work.
+            </p>
+        </div>
+        <div class="qualification">
+            <h2 style="margin-bottom: 0px;">Qualification</h2><br>
+            <p style="margin-top: 0px;">Completed Grade 10 from Gothatar English Seconday School<br>
+                Completed 10+2 from Xavier International College
+            </p>
+        </div>
+        <div class="skills">
+            <h2 style="margin-bottom: 0px;">Skills</h2><br>
+            <p style="margin-top: 0px;">Foundational knowledge in web development<br>
+                Beginner in HTML, CSS, Javascript<br>
+                Beginner in programming languages such as Python, Java, C-program<br>
+                <a href="javascript:void(0)" onclick="openimg()"
+                    style="color: #dac09e; margin: 20px 0px; text-decoration: none; text-align: center;">View a
+                    certiificate that I received</a>
+            <div class="certificate" id="certificate" style="display: none;">
+                <img style="border-radius: 0%; width: 70%; height: 70%; border: 5px solid #9a7a50;"
+                    src="../../Images/About-us_images/cs50.png">
+                <button class="close_btn" onclick="closeimg()"
+                    style="height: 50%; border-radius: 5px; background-color: white; color: #9a7a50; border: 2px solid #9a7a50; font-weight: 550;">X</button>
+            </div>
+            </p>
+        </div>
+    </div>
+    <footer><!--footer section-->
+        <p>&copy; Phoenix 2025. All rights reserved.</p>
+    </footer>
+    <script>
+        function openimg() {
+            document.getElementById('certificate').style.display = "flex";
+        }
+
+        function closeimg() {
+            document.getElementById('certificate').style.display = "none";
+        }
+
+        //the contact page function of script.js is not used due to pasth issue
+        function contact_page_call() {
+            window.location.href = '../contact.html';
+        }
+
+    </script>
+</body>
+
+</html>

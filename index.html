@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<!--meta tag for seo-->
+<meta name="description" content="buy watches,luxury watches,premium watces">
+<meta name="keywords" content="Phoenix, watches, classic, digital">
+<meta name="author" content="Phoenix">
+
+<head>
+    <title>Phoenix Home</title>
+    <link rel="stylesheet" href="styles.css"><!--linking css-->
+    <link rel="icon" href="Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+
+    <style>
+        section {
+            margin: 40px 0 0 40px;
+        }
+
+        /*styling the hero section*/
+        .hero {
+            font-weight: bold;
+            /*bold text*/
+            font-family: verdana, sans-serif;
+            color: white;
+            font-size: 90px;
+            padding: 20px 60px 0px 60px;
+            /*gap between the container border and the content*/
+            display: flex;
+            /*make layout flexible, making alignment, size, direction more flexible to design*/
+            justify-content: space-between;
+            /*it is an alignment property that puts space between the contents*/
+        }
+
+        /*styling the div container of View Products button*/
+        .view_products {
+            display: flex;
+            /*make layout flexible, making alignment, size, direction more flexible to design*/
+            justify-content: center;
+            /*it is an alignment property that puts the content in center*/
+            width: 50%;
+        }
+
+        /*styling the View Products button, Read More Blogs button and View full reference button*/
+        .view_products input,
+        .blogs_section input,
+        .research_button input,
+        .about_us_button input {
+            background: #e0cb98;
+            padding: 12px;
+            /*gap between the button border and the text inside*/
+            border-radius: 25px;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            /*cursor turns pointer when hovered*/
+        }
+
+        /*setting background for the View Products, View full references and Blogs buttons*/
+        .view_products input:hover,
+        .blogs_section input:hover,
+        .research_button input:hover,
+        .about_us_button input:hover {
+            background: #e4c57d;
+        }
+
+        .blogs_section input {
+            margin: 30px 0 0 30px;
+            /*gap in top-right-bottom-left of the button*/
+        }
+
+        /*styling the headings of overview of different pages*/
+        .heading {
+            color: white;
+            font-family: sans-serif;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        /*styling the characteristics section*/
+        .characteristics {
+            display: flex;
+            /*make layout flexible, making alignment, size, direction more flexible to design*/
+            justify-content: space-evenly;
+            /*it is an alignment property that puts equal space between and around the contents*/
+        }
+
+        /*styling the containers of characteristics section*/
+        .image_container {
+            display: flex;
+            /*make layout flexible, making alignment, size, direction more flexible to design*/
+            cursor: pointer;
+            /*cursor turns pointer when hovered*/
+        }
+
+        /*styling the image in the containers of characteristics section*/
+        .image_container img {
+            height: 600px;
+            width: 300px;
+            border-radius: 30px;
+            /*roundness of border corner*/
+            object-fit: cover;
+            /*image is cropped and not stretched to the width*/
+            cursor: pointer;
+            /*cursor turns pointer when hovered*/
+            transition: all ease 0.5s;
+            /*put animation*/
+        }
+
+        /*styling the overlaid text in the containers of characteristics section  */
+        .overlaid_text {
+            position: absolute;
+            /*the absolute positioned text overlays the image*/
+            height: 600px;
+            width: 300px;
+            align-content: center;
+            /*the text is aligned center*/
+            opacity: 0;
+            /*initially hidden*/
+            transition: all ease 0.5s;
+            /*put animation*/
+        }
+
+        /*aligning the title of the characteristic text or overlaid text */
+        .overlaid_text h1 {
+            color: #e0cb98;
+            font-size: 40px;
+            text-align: center;
+            /*align text to the center*/
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /*aligning the content of the characteristic text or overlaid text */
+        .overlaid_text p {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            /*align text to the center*/
+            padding: 10%;
+            /*gap between the container border and the text inside*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /*styling the image of the characteristic section when hovered*/
+        .image_container:hover img {
+            filter: blur(4px) brightness(50%);
+            /*when image is hovered, it is blurred by 4px and brightness is reduced to 50%*/
+        }
+
+        /*styling the image of the characteristic section when hovered*/
+        .image_container:hover .overlaid_text {
+            opacity: 100;
+            /*the overlaid text is fully visible when hovered*/
+        }
+
+
+        /*Styling each watches containers*/
+        .watch {
+            padding: 20px;
+            /*gap between the container border and the text inside*/
+            display: flex;
+            /*make layout flexible, making alignment, size, direction more flexible to design*/
+            justify-content: space-evenly;
+            /*it is an alignment property that puts equal space between and around the contents*/
+        }
+
+        /*Styling each characteristics text of the waches*/
+        .watch p {
+            color: white;
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+
+        /*Styling the container that contains text in the watches container*/
+        .watch_text {
+            width: 500px;
+            /*Set the width of the container inside the watch containing text*/
+        }
+
+        /*Styling the text in the watch container mentioning the name of the watch*/
+        .watch h2 {
+            font-size: 40px;
+            font-family: sans-serif;
+            color: #e0cb98;
+        }
+
+        /*Styling the image of the watch in the watch container*/
+        .watch img {
+            height: 300px;
+            cursor: pointer;
+            /*cursor turns pointer when hovered*/
+        }
+
+        /*Styling the Buy button in the watch container*/
+        .watch input {
+            background: #b49363;
+            padding: 15px;
+            /*gap between the container border and the text inside*/
+            border: solid 0;
+            border-radius: 5px;
+            /*roundness of border corner*/
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            /*cursor turns pointer when hovered*/
+        }
+
+        /*styling the Read More button container*/
+        .read_more_blogs {
+            display: flex;
+            /*make layout flexible, making alignment, size, direction more flexible to design*/
+            justify-content: center;
+            /*it is an alignment property that put the contents in the center of the container*/
+        }
+
+        .research {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .research_button {
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .references {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .research img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .about_us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto 30px auto;
+            padding: 0 200px;
+        }
+
+        .about_us p {
+            text-align: center;
+            color: #fffaef;
+            font-family: sans-serif;
+            font-size: 22px;
+        }
+
+        .about_us_button {
+            display: flex;
+            gap: 30px;
+        }
+
+        .timer h1 {
+            color: white;
+            text-align: center;
+            font-size: 45px;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .timer h2 {
+            color: #e0cb98;
+            text-align: center;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .timer {
+            padding: 30px 0;
+        }
+
+        /*chatbot*/
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .chatbot h3 {
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        #chatbot_image {
+            width: 60px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .chatbox {
+            display: none;
+            /*hidden at first*/
+            position: fixed;
+            /*remain fixed even when scrolling*/
+            bottom: 80px;
+            /*80px from bottom*/
+            right: 20px;
+            /*20px from right*/
+            width: 300px;
+            border-radius: 10px;
+            background: black;
+            color: white;
+            box-shadow: 0 0 5px 5px rgb(55, 55, 55);
+            /*put shadow around the box: 0px horizontal offset, 0px vertical offset, 5px blur radius, 5px spread radius and the color*/
+        }
+
+        .chatbox_header {
+            color: #b49363;
+            font-family: sans-serif;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #close_chatbox {
+            height: 25px;
+            border-radius: 10px;
+            background: rgb(33, 33, 33);
+            color: #e0cb98;
+            border: none;
+            cursor: pointer;
+        }
+
+        .chatbox_body {
+            padding: 10px;
+        }
+
+        .question {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background: #e0cb98;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        .question:hover {
+            background: #dfc27f;
+        }
+
+        #answer {
+            margin-top: 10px;
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header><!--the header tab-->
+        <img src="Images/phoenix.png" alt="logo" class="logo">
+        <nav>
+            <ul><!--Items in the header tab-->
+                <li><a href="index.html" style="color:#e0cb98;">Home</a></li>
+                <li><a href="Pages/products.html">
+                        Products
+                    </a></li>
+                <li><a href="Pages/blog.html">Blogs</a></li>
+                <li><a href="Pages/research.html">
+                        Research</li>
+                </a>
+                <li><a href="Pages/about.html">About us
+                    </a></li>
+                <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero_section"><!--the hero section-->
+        <div class="hero">
+            <p>Your <span style="color:#e0cb98">Time</span><br><!--the span tag styles the part of a text-->
+                Our <span style="color:#b49363">Legacy</span></p>
+            <img src="Images/phoenix_watch.png" alt="an image of phoenix watch" height=350px>
+        </div>
+        <div class="view_products"><!--View Products button, that would redirect to Products page-->
+            <input type="button" value="View Our Products" onclick="product_page_call()">
+        </div>
+    </section>
+
+
+    <section class="characteristics"> <!--characteristics of phoenix-->
+        <figure class="image_container"><!--a full image-->
+            <img src="Images/history_watch.jpg" alt="old watches" id="history_watch">
+            <div class="overlaid_text"><!--this part is visible only when hovered-->
+                <h1>History</h1>
+                <p>Timeless elegance since 1990</p>
+            </div>
+        </figure>
+
+        <figure class="image_container">
+            <img src="Images/classic_watch.jpg" alt="classic watches" id="classic_watch">
+            <div class="overlaid_text"><!--this part is visible only when hovered-->
+                <h1>Class</h1>
+                <p>Worldwide sensation of luxury</p>
+            </div>
+        </figure>
+
+        <figure class="image_container">
+            <img src="Images/authentic_watch.jpg" alt="authentic watches" id="authentic_watch">
+            <div class="overlaid_text"><!--this part is visible only when hovered-->
+                <h1>Authenticity</h1>
+                <p>Quality requires craftmanship</p>
+            </div>
+        </figure>
+    </section>
+
+
+    <section class="blogs_section"> <!--blogs-->
+        <h1 class="heading">Read our Blogs</h1>
+
+        <div class="blogs"> <!--this div contains the blogs boxes-->
+
+            <div class="blog"> <!--this div is the blog box-->
+                <img src="Images/Blog_images/technology_advancement.jpg"
+                    alt="A person shopping online"><!--image for the blog-->
+                <h2>Technological Advancements in Watch Design and Sales</h2><!--title of the blog-->
+                <h3>Phoenix</h3>
+                <p>AI can identify any surface defects, scratches and assembly errors, helping the industry to improve
+                    quality and reduce production discrepancies...
+                </p><!--a little part extracted from the actual blog-->
+                <a href="Pages/Blog-contents/advancement.html" target="_blank"><input type="button"
+                        value="Read More"><!--the button that redirects to the blog content page-->
+                </a>
+            </div>
+
+            <div class="blog"> <!--this div is the blog box-->
+                <img src="Images/Blog_images/impacts_of_watch_industry.jpg"
+                    alt="A person shopping online"><!--image for the blog-->
+                <h2>Impact of technology in watch industry</h2><!--title of the blog-->
+                <h3>Phoenix</h3>
+                <p>While physical stores were closed, technology enabled a continuous exposure of the brand image, kept
+                    sales going thus turnover and jobs...
+                </p><!--a little part extracted from the actual blog-->
+                <a href="Pages/Blog-contents/impact.html" target="_blank"><input type="button"
+                        value="Read More"><!--the button that redirects to the blog content page-->
+                </a>
+            </div>
+        </div>
+        <div class="read_more_blogs"><!--View Products button, that would redirect to Products page-->
+            <input type="button" value="Read more blogs" onclick="blog_page_call()">
+        </div>
+    </section>
+
+
+    <section class="featured_watches" style="padding:20px;"> <!--Some stand out watches collection-->
+        <h1 class="heading">Featured collection</h1>
+
+        <div class="watch"><!--a container for specific watch-->
+            <div class="watch_text"><!--container for text-->
+                <h2>Rolex Deepsea</h2><!--name of watch-->
+                <p>10kt yellow gold</p><!--key feature of the watch-->
+                <p>Helium Escape Valve in Titanium</p><!--key feature of the watch-->
+                <input type="button" value="Buy at NRP 1,16,660"
+                    onclick="buy_product(this)"><!--buy button--><!--this keyword represents the clicked button-->
+            </div>
+            <img src="Images/Product_images/rolex_deepsea.png" alt="rolex deepsea watch"><!--image of the watch-->
+        </div>
+
+        <div class="watch"><!--a container for specific watch-->
+            <div class="watch_text"><!--container for text-->
+                <h2>Casio A168WEGB-1B</h2><!--name of watch-->
+                <p>Black and Gold</p><!--key feature of the watch-->
+                <p>Stainless Steel</p><!--key feature of the watch-->
+                <input type="button" value="Buy at NRP 8,000"
+                    onclick="buy_product(this)"><!--buy button--><!--this keyword represents the clicked button-->
+            </div>
+            <img src="Images/Product_images/casio.png" alt="casio A168WEGB-1B watch"><!--image of the watch-->
+        </div>
+
+        <div class="watch"><!--a container for specific watch-->
+            <div class="watch_text"><!--container for text-->
+                <h2>Gurkha Urban Chloro Black Dial</h2><!--name of watch-->
+                <p>Sapphire Crystal Glass</p><!--key feature of the watch-->
+                <p>Genuine Leather Strap</p><!--key feature of the watch-->
+                <input type="button" value="Buy at NRP 14,875"
+                    onclick="buy_product(this)"><!--buy button--><!--this keyword represents the clicked button-->
+            </div>
+            <img src="Images/Product_images/gurkha.png" alt="gurkha urban chloro black watch"><!--image of the watch-->
+        </div>
+    </section>
+
+    <!--Overview of research page-->
+    <section class="research"><!--Overview of the research page-->
+        <h1 class="heading">Research and References</h1>
+        <p style="color: #fffaef;font-family: sans-serif;font-size: 25px;">These are some of the references taken in
+            this
+            website.</p>
+        <div class="references">
+            <img src="Images/Alibaba.png" alt="Alibaba">
+            <img src="Images/Pexels.png" alt="Pexels">
+            <img src="Images/Rolex.jpg" alt="Rolex">
+        </div>
+        <div class="research_button">
+            <input type="button" value="View full references" onclick="research_page_call()">
+        </div>
+    </section>
+
+    <!--Overview of About us page-->
+    <section class="about_us">
+        <h1 class="heading">About us</h1>
+        <p>We are a team of five members implementing
+            our skills in designing Phoenix website. The coordination and determination of our team members have made
+            Phoenix an appealing site.</p>
+        <div class="about_us_button">
+            <input type="button" value="Get to know us" onclick="aboutus_page_call()">
+        </div>
+    </section>
+
+    <!--Live time display-->
+    <section class="timer">
+        <h1 id="time"></h1>
+        <h2>Kathmandu</h2>
+    </section>
+
+    <!--FAQ Chatbot-->
+    <div class="chatbot">
+        <img src="Images/chatbot_image.png" alt="Phoenix chatbot" id="chatbot_image">
+        <h3>Query?</h3>
+        <div class="chatbox" id="chatbox">
+            <div class="chatbox_header">
+                <h2>FAQs</h2>
+                <button id="close_chatbox">X</button>
+            </div>
+            <div class="chatbox_body">
+                <button class="question" onclick="answer('What is Phoenix?')">What is Phoenix?</button>
+                <button class="question" onclick="answer('Who developed Phoenix?')">Who developed Phoenix?</button>
+                <button class="question" onclick="answer('How to purchase watches?')">How to purchase watches?</button>
+                <div id="answer"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer><!--footer section-->
+        <p>&copy; Phoenix 2025. All rights reserved.</p>
+    </footer>
+
+
+    <script> //javascript
+        //product page redirecting button
+        function product_page_call() {
+            window.location.href = 'Pages/products.html';
+        }
+        //blog page redirecting button
+        function blog_page_call() {
+            window.location.href = 'Pages/blog.html';
+        }
+        function contact_page_call() {
+            window.location.href = 'Pages/contact.html';
+        }
+        //the contact page call is not called externally through script.js here because of the path issue
+        function research_page_call() {
+            window.location.href = 'Pages/research.html';
+        }
+        //research page redirection button
+        function aboutus_page_call() {
+            window.location.href = 'Pages/about.html';
+        }
+        //about us page redirection button
+
+
+        //timer
+        function TheKathmanduTimer() {
+            const Time = document.getElementById('time'); //getting the time element by its id
+            const now = new Date(); //creating a new date, the now keyword specifies the current date
+            const options = { timeZone: 'Asia/Kathmandu', hour: '2-digit', minute: '2-digit', second: '2-digit' }; //setting up timezone and format
+            const timeString = now.toLocaleTimeString('en-US', options);
+            Time.textContent = timeString; //updates the time effectively
+        }
+
+        setInterval(TheKathmanduTimer, 1000); // specifies to update the time every 1000 milliseconds, which is 1 second
+        TheKathmanduTimer(); // Initial call to display time immediately
+
+        //FAQ chatbot
+        document.getElementById('chatbot_image').addEventListener('click', function () {
+            document.getElementById('chatbox').style.display = 'block';
+        }); //when the chatbot image is clicked, the chatbox appears
+
+        document.getElementById('close_chatbox').addEventListener('click', function () {
+            document.getElementById('chatbox').style.display = 'none';
+        }); //when the close button is clicked, the chatbox dissapears
+
+        function answer(question) {
+            let answerText = ''; //The initial answer is empty
+            if (question === 'What is Phoenix?') {
+                answerText = 'Phoenix is a retail watch marketing brand which is also working to revolutionize the ecommerce industry through technology.';
+            } else if (question === 'Who developed Phoenix?') {
+                answerText = 'Phoenix was developed by a group of friends at Islington College Nepal. You can view more about the creators in About us page.';
+            } else if (question === 'How to purchase watches?') {
+                answerText = 'You can go to Products page and browse the watches and purchase the one you like by clicking the buy button.';
+            }
+            document.getElementById('answer').textContent = answerText;
+        }
+    </script>
+    <script src="script/scripts.js"></script>
+</body>
+
+</html>

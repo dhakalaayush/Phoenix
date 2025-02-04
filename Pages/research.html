@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phoenix Research</title>
+    <link rel="stylesheet" href="../styles.css"><!--linking css-->
+    <link rel="icon" href="../Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+    <style>
+        .little_bit_text {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+
+        }
+
+        .container {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin: auto auto;
+        }
+
+        h1,
+        h2 {
+            color: #e0cb98;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        p {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        table {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            list-style: none;
+            width: 50%;
+        }
+
+        a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        .Homepage,
+        .Products_page,
+        .blogs_page,
+        .about_us_page,
+        .contact_us_page {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .website_image {
+            width: 1000px;
+            border: solid #b49363 2px;
+            border-radius: 20px;
+        }
+
+
+        .chatbot_img {
+            border: solid #b49363 2px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="../Images/phoenix.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="products.html">
+                        Products
+                    </a></li>
+                <li><a href="../Pages/blog.html">Blogs</a></li>
+                <li><a href="research.html" style="color:#e0cb98;">
+                        Research</li>
+                </a>
+                <li><a href="../Pages/about.html">About us
+                    </a></li>
+                <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h1>Research and References</h1>
+        <div class="little_bit_text">
+            This is research section. The references and inspirations for the development of this website are included
+            here.
+            There are images of webpages from a website (when clicked will redirect to that website) from which our
+            pages
+            are inspired.
+        </div>
+        <section class="Homepage">
+            <h2>Homepage</h2>
+            <img src="../Images/Research_images/homepage_hero_section.png" class="website_image">
+            <p>The image of the watch
+                in
+                the
+                hero section was imported from <a href="https://www.pexels.com">pexels</a>.
+            </p>
+            <a href="https://www.catwatches.com" target="_blank"><img class="website_image"
+                    src="../Images/Research_images/catwatchimg.png"></a>
+            <p>The design scheme of the header section was inspired from the website <a
+                    href="https://www.catwatches.com" target="_blank">catwatches</a> and the color scheme of the website
+                was selected by the group members.</p>
+            <img src="../Images/Research_images/homepage_characteristics_section.png" class="website_image">
+
+            <p>These images were imported from <a href="https://www.pexels.com">pexels.</a> The chararcteristics of
+                Phoenix is
+                displayed when these images are hovered over.</p>
+
+            <img src="../Images/Research_images/homepage_blog_section.png" class="website_image">
+            <p>The blog section in homepage provides an overview of the <a href="../Pages/blog.html">blog page.</a></p>
+
+            <img src="../Images/Research_images/homepage_featured_collection.png" class="website_image">
+            <p>The Featured Collection includes some trending products from the <a href="../Pages/products.html">product
+                    page.</a></p>
+
+            <img src="../Images/Research_images/homepage_research.png" class="website_image">
+            <p>The research section in homepage includes some references taken in developing the website and is an
+                overview of
+                the <a href="research.html">research page.</a></p>
+
+            <img src="../Images/Research_images/homepage_about-us.png" class="website_image">
+            <p>The about us section in homepage is about the group and is an overview of <a href="about.html">about us
+                    page.</a></p>
+
+            <img src="../Images/Research_images/live_time.png" class="website_image">
+            <p>The live time section in the homepage displays the real time (HH:MM:SS) of Kathmandu.</p>
+
+            <div class="chatbot_images">
+                <img src="../Images/Research_images/chatbot1.png" class="chatbot_img">
+                <img src="../Images/Research_images/chatbot2.png" class="chatbot_img">
+                <img src="../Images/Research_images/chatbot3.png" class="chatbot_img">
+            </div>
+            <p>The FAQ chatbot is the unique feature of the website. It includes three FAQs with answers.</p>
+        </section>
+
+        <section class="Products_page">
+            <h2>Products page</h2>
+            <img src="../Images/Research_images/product_page1.png" class="website_image">
+            <img src="../Images/Research_images/product_page2.png" class="website_image"><img
+                src="../Images/Research_images/product_page3.png" class="website_image">
+            <a href="https://smartdoko.com/" target="_blank">
+                <img class="website_image" src="../Images/Research_images/product.png"></a>
+
+            <p>The product page layout was inspired from <a href="https://smartdoko.com/" target="_blank">smartdoko</a>.
+            </p>
+            <p>The watches and their respective models, prices, features and images were referenced from the
+                following
+                sites:
+            <table>
+                <tr>
+                    <td><a href="https://www.rolex.com/">Rolex</a></td>
+                    <td>Watches of rolex brand</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.casio.com/">Casio</a></td>
+                    <td>Watches of Casio brand</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.classiquewatches.com/">Classique</a></td>
+                    <td>Wacthes of Classique brand</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.apple.com/watch/">Apple</a></td>
+                    <td>Wacthes of Apple brand</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.daraz.com/">Daraz</a></td>
+                    <td>Watches of other brands</td>
+                </tr>
+            </table>
+            </p>
+        </section>
+        <!-- This is my research -->
+        <section class="blogs_page">
+            <h2>Blogs page</h2>
+            <img src="../Images/Research_images/blog_page.png" class="website_image">
+            <a href="https://newbreak.church/blog/?gad_source=1"><img class="website_image"
+                    src="../Images/Research_images/blog1.png"></a>
+            <p>The blog page feed layout was inspired from <a href="https://newbreak.church/blog/?gad_source=1"
+                    target="_blank">Newbreak Church</a></p>
+            <img src="../Images/Research_images/blogs2.png" class="website_image">
+            <p>The blog contents were developed by the group members.</p>
+        </section>
+
+        <section class="about_us_page">
+            <h2>About us page</h2>
+            <img src="../Images/Research_images/about_us.png" class="website_image">
+            <img src="../Images/Research_images/about_us2.png" class="website_image">
+            <p>The about us page includes a short detail of the team members and was designed by the team members.</p>
+        </section>
+        <section class="contact_us_page">
+            <h2>Contact us page</h2>
+            <img class="website_image" src="../Images/Research_images/contact_us.png">
+            <p>The contact us page contains form was designed by the group members.
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; Phoenix 2025. All rights reserved.</p>
+    </footer>
+    <script src="../script/scripts.js"></script>
+</body>
+
+</html>

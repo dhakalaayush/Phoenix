@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+    <title>Blogs</title>
+    <style>
+        .blogs_container {
+            display: flex;
+            width: 100%;
+        }
+
+        .blog {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <header><!--the header tab-->
+        <img src="../Images/phoenix.png" alt="logo" class="logo">
+        <nav>
+            <ul><!--Items in the header tab-->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Pages/products.html">
+                        Products
+                    </a></li>
+                <li><a href="../Pages/blog.html" style="color:#e0cb98;">Blogs</a></li>
+                <li><a href="../Pages/research.html">
+                        Research</li>
+                </a>
+                <li><a href="../Pages/about.html">About us
+                    </a></li>
+                <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1 style="color:white; font-family:sans-serif;font-size: 40px;text-align: center;">Read our Blogs</h1>
+
+    <div class="blogs_container"> <!--this div contains the blogs boxes-->
+
+        <div class="blog"> <!--this div is the blog box-->
+            <img src="../Images/Blog_images/technology_advancement.jpg"
+                alt="A person shopping online"><!--image for the blog-->
+            <h2>Technological Advancements in Watch Design and Sales</h2><!--title of the blog-->
+            <h3>Phoenix</h3>
+            <p>AI can identify any surface defects, scratches and assembly errors, helping the industry to improve
+                quality and reduce production discrepancies...
+            </p><!--a little part extracted from the actual blog-->
+            <a href="../Pages/Blog-contents/advancement.html" target="_blank"><input type="button"
+                    value="Read More"><!--the button that redirects to the blog content page-->
+            </a>
+        </div>
+
+        <div class="blog"> <!--this div is the blog box-->
+            <img src="../Images/Blog_images/impacts_of_watch_industry.jpg"
+                alt="A person shopping online"><!--image for the blog-->
+            <h2>Impact of technology in watch industry</h2><!--title of the blog-->
+            <h3>Phoenix</h3>
+            <p>While physical stores were closed, technology enabled a continuous exposure of the brand image, kept
+                sales going thus turnover and jobs...
+            </p><!--a little part extracted from the actual blog-->
+            <a href="../Pages/Blog-contents/impact.html" target="_blank"><input type="button"
+                    value="Read More"><!--the button that redirects to the blog content page-->
+            </a>
+        </div>
+
+        <div class="blog"> <!--this div is the blog box-->
+            <img src="../Images/Blog_images/consumer_trend.jpg" alt="A person shopping online"><!--image for the blog-->
+            <h2>Consumer Trends on watch industry</h2><!--title of the blog-->
+            <h3>Phoenix</h3>
+            <p>Today the watch industry is more diverse and dynamic than ever. contemporary designs often balance
+                tradition and innovation,...
+            </p><!--a little part extracted from the actual blog-->
+            <a href="../Pages/Blog-contents/consumer_trends.html" target="_blank"><input type="button"
+                    value="Read More"><!--the button that redirects to the blog content page-->
+            </a>
+        </div>
+
+    </div>
+    <footer><!--footer section-->
+        <p>&copy; Phoenix 2025. All rights reserved.</p>
+    </footer>
+    <script src="../script/scripts.js"></script>
+</body>
+
+</html>

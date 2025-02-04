@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../Images/phoenix.png">
+    <!--favicon: the picture in the browser tab-->
+</head>
+
+<body>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: Verdana;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .middle {
+            position: relative;
+            height: 800px;
+            padding: 0px 30px 0px 30px;
+        }
+
+        /*styling title1*/
+        .title1 {
+            color: white;
+            left: 15px;
+        }
+
+        .line {
+            margin-left: 10px;
+            width: 40%;
+            border: none;
+            background-color: white;
+            height: 1px;
+        }
+
+        /*styling para1 which lies inside box1*/
+        .middle .para1 {
+            left: 15px;
+            max-width: 50%;
+            font-family: inherit;
+            color: white;
+            font-weight: 549;
+            line-height: 25px;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        /*styling para2 which lies inside box1*/
+        .middle .para2 {
+            left: 15px;
+            max-width: 50%;
+            font-family: inherit;
+            color: white;
+            font-weight: 549;
+            line-height: 25px;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        /*styling para3 which lies inside box1*/
+        .middle .para3 {
+            left: 15px;
+            max-width: 50%;
+            font-family: inherit;
+            color: white;
+            font-weight: 549;
+            line-height: 25px;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            left: 15px;
+            left: 25px;
+            line-height: 1.5;
+        }
+
+        .phone_num {
+            position: relative;
+            top: -4px;
+        }
+
+        .mail_add {
+            position: relative;
+            top: -4px;
+        }
+
+        .instagram_name {
+            position: relative;
+            top: -4px;
+        }
+
+        .formbox {
+            display: flex;
+            padding: 25px 25px;
+            color: #b49363;
+            border-radius: 20px;
+            position: absolute;
+            right: 110px;
+            top: 0;
+            box-shadow: 0px 0px 5px 10px rgb(19, 19, 19);
+            /*put shadow around the box: 0 horizontal offset, 0 vertical offset, 5px blur radius, 10px spread radius and the color*/
+        }
+
+
+        .title2 {
+            position: relative;
+            color: #9a7a50;
+        }
+
+        .input {
+            padding: 5px;
+            line-height: 45px;
+        }
+
+        .formbox form .input {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            font-size: 20px;
+            justify-content: flex-end;
+            font-size: 30px;
+        }
+
+        /*styling the text fields*/
+        .field1 {
+            border: 1px solid grey;
+            height: 35px;
+            width: 450px;
+            font-size: 14px;
+            border-radius: 2.5px;
+        }
+
+        .field2 {
+            border: 1px solid grey;
+            height: 100px;
+            width: 450px;
+            font-size: 16px;
+            resize: none;
+            border-radius: 2.5px;
+            font-family: inherit;
+            overflow-y: hidden;
+        }
+
+        /*styling the button*/
+        .submit {
+            height: 30px;
+            width: 455px;
+            border-radius: 2.5px;
+            border: 1px solid grey;
+            font-family: inherit;
+            background-color: #b49363;
+            cursor: pointer;
+        }
+
+        /*adding a animation to the button that is trigered when the user hovers over it*/
+        .submit:hover {
+            transform: translateY(-2px);
+            animation-timing-function: ease-in;
+            animation-duration: 3s;
+        }
+    </style>
+
+    <div class="container">
+        <div class="top">
+            <header><!--the header tab-->
+                <img src="../Images/phoenix.png" alt="logo" class="logo">
+                <nav>
+                    <ul><!--Items in the header tab-->
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../Pages/products.html">
+                                Products
+                            </a></li>
+                        <li><a href="../Pages/blog.html">Blogs</a></li>
+                        <li><a href="../Pages/research.html">
+                                Research</li>
+                        </a>
+                        <li><a href="../Pages/about.html">About us
+                            </a></li>
+                        <li><input type="button" value="Contact us"></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="middle">
+            <div class="title1">
+                <h1 style="color: #9a7a50; font-size: 55px;">Contact us</h1>
+            </div>
+
+            <hr class="line">
+            <!--adding a horizontal line-->
+            <div class="para1">
+                Feel free to send us a message if you are in any confusion. All your queries will be answered one
+                <i><b>tick</b></i> at a time
+                by our team members.
+            </div>
+
+            <div class="para2">
+                Whether you have any problem with your order, want more detailed information on products or just want to
+                have a
+                chat about watches in general no matter what we are here for you.
+            </div>
+
+            <div class="para3">
+                You can choose to ring us at the given number, send us a message through the form provided right at the
+                side of this page
+                or you can also directly message us through our social media.
+            </div>
+            <div class="links" style="color:#b49363; font-size: 20px; font-weight: 525;">
+                <!--displaying various contact info-->
+                <image class="phone" src="../Images/Contact_images/phone.png" width="20" height="20"></image>&nbsp;<span
+                    class="phone_num">01
+                    44856978</span><br>
+                <image class="mail" src="../Images/Contact_images/email.png" width="22" height="20"></image>&nbsp;<span
+                    class="mail_add">customerservice@pheonix.org</span><br>
+                <image class="instagram" src="../Images/Contact_images/instagram.png" width="20" height="20"></image>
+                &nbsp;<span class="instagram_name">@phoenix</span><br>
+            </div>
+
+            <div class="formbox">
+                <form id="form" onsubmit="validate(event)"><!--making a form adding text fields and givin them IDs-->
+                    <div class="title2">
+                        <h1>Reach out to us!</h1></span>
+                    </div>
+                    <div class="input">
+                        <span class="fname">First Name</span>
+                        <input type="text" class="field1" id="fname" placeholder="First name">
+                    </div>
+
+                    <div class="input">
+                        <span class="lname">Last Name</span>
+                        <input type="text" class="field1" id="lname" placeholder="Last name">
+                    </div>
+
+                    <div class="input">
+                        <span class="email">Email</span>
+                        <input type="text" class="field1" id="email" placeholder="email@domain.com">
+                    </div>
+
+                    <div class="input">
+                        <span class="phone">Phone no.</span>
+                        <input type="text" class="field1" id="phone" placeholder="phone no.">
+                    </div>
+
+                    <div class="input">
+                        <span class="msg">Message</span>
+                        <textarea class="field2" rows="4" cols="50" id="msg" placeholder="Your message"></textarea>
+                    </div>
+
+                    <div class="input"><!--making a submit button-->
+                        <button class="submit" id="submit" onclick="validate()"><span
+                                style="font-weight: 600;">Submit</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <footer><!--footer section-->
+                <p>&copy; Phoenix 2025. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="../script/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Phoenix Products
+  </title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../Images/phoenix.png">
+  <!--favicon: the picture in the browser tab-->
+  <style>
+    /*styling the div container class*/
+    .container {
+      display: flex;
+      overflow-x: auto;
+      width: 90%;
+      margin: 50px;
+    }
+
+    /*customization of horizontal scrollbar*/
+    .container::-webkit-scrollbar {
+      height: 0px;
+      background: none;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+      background: #b49363;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #e0cb98;
+      font-size: 40px;
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .watch {
+      min-width: 250px;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .watch img {
+      height: 250px;
+    }
+
+    .watch h2 {
+      font-size: 25px;
+      font-family: sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .watch h4 {
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .watch p {
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .watch input {
+      background: #b49363;
+      padding: 15px;
+      border: solid 0;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .filled_star {
+      color: #b49363;
+    }
+
+    .unfilled_star {
+      color: #e6d9bc;
+    }
+    .viewbtn{
+      background: #b49363;
+      padding: 9px;
+      border: solid 0;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .feedback{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      color: #b49363;
+      padding: 0px 0px 50px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      display: none;
+    }
+    .review_h1{
+      position: relative;
+      left: -173px;
+    }
+    .review_h2{
+      position: relative;
+      left: -145px;
+    }
+    .drop_down{
+      width: 500px;
+      height: 30px;
+      margin: 10px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .review_text_area{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      margin: 10px;
+      width: 500px;
+      height: 100px;
+      border-radius: 10px;
+      resize: none;
+    }
+    .review_sbt{
+      width: 505px;
+      margin: 10px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: #b49363;
+      font-weight: bold;
+    }
+    .review_toggle{
+      width: 150px;
+      margin: 10px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: #b49363;
+      font-weight: bold;
+      position: relative;
+      left: 670px;
+    }
+  </style>
+</head>
+
+<body>
+  <header><!--header section declaration-->
+    <img src="../Images/phoenix.png" alt="logo" class="logo">
+    <nav>
+      <ul><!--unordered list-->
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html" style="color:#e0cb98;">
+            Products
+          </a></li>
+        <li><a href="../Pages/blog.html">Blogs</a></li>
+        <li><a href="research.html">
+            Research</li>
+        </a>
+        <li><a href="../Pages/about.html">About us
+          </a></li>
+        <li><input type="button" value="Contact us" onclick="contact_page_call()"></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <h1>
+    Classic watches
+  </h1>
+
+  <div class="container"><!--this div contains all classsic watches products-->
+
+    <div class="watch"><!--a container for a watch-->
+      <img src="../Images/Product_images/casio.png">
+      <h2>
+        Casio A168WEGB-1B
+      </h2>
+      <p style="display: none;">Featuring a sleek black resin band,
+        gold-tone
+        bezel, it includes a stopwatch, daily alarm, and LED light. it is powered by quartz movement, it’s a practical yet stylish choice for everyday wear.</p>
+        <button  class="viewbtn" onclick="descriptionToggle(this)">view more</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>8,800</strike></h4><!--the strike tag cuts the text-->
+      <input type="button" value="Buy at NRP 8,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+    </div>
+    
+
+
+    <div class="watch">
+      <img src="../Images/Product_images/gurkha.png">
+      <h2>
+        Gorkha Urban Chloro Black Dial
+      </h2>
+      <p style="display: none;">Blends sophistication and modernity with style and functionality. 
+        Features minimalist markers for a clean look. Built with a durable stainless steel case and a
+        strap, it is
+        perfect for both casual or formal occasions.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>16,000</strike></h4>
+      <input type="button" value="Buy at NRP 14,850"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/cartier.png">
+      <h2>
+        Cartier Ronde Louis Rose
+      </h2>
+      <p style="display: none;">Timeless luxury watch with a polished 18k rose gold case, white dial, Roman
+        numerals.
+        Powered by a Swiss mechanical movement. Its
+        refined
+        design and warm rose gold make it a standout for lovers of fine craftsmanship.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>72,000</strike></h4>
+      <input type="button" value="Buy at NRP 67,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/classique_swiss_watch.png">
+      <h2>
+        Classique Swiss Watch - 0436GFLEXI
+      </h2>
+      <p style="display: none;">Combines elegance and functionality. Featuring a polished stainless steel
+        case,
+        and clean dial with clear markers. Powered by Swiss quartz
+        movement for
+        precision, its versatile design suits both casual and formal occasions.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>35,000</strike></h4>
+      <input type="button" value="Buy at NRP 32,502"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+
+    <div class="watch">
+      <img src="../Images/Product_images/classique_lincoln.webp">
+      <h2>
+        Classique Lincoln Watch
+      </h2>
+      <p style="display: none;">Blends timeless design with functionality. Its polished stainless steel
+        case
+        features a clean dial, paired with a leather or metal strap.
+        Powered by
+        Swiss quartz movement. An elegant choice for both casual and formal.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>78,000</strike></h4>
+      <input type="button" value="Buy at NRP 70,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/classique_theo.webp">
+      <h2>
+        Classique Theo Watch
+      </h2>
+      <p style="display: none;">Blends modern style with classic elegance. It features a polished
+        stainless
+        steel case, and a clean dial with simple hour markers. Paired with a durable leather strap,
+        it
+        offers a reliable quartz movement. It is an elegant choice.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>32,000</strike></h4>
+      <input type="button" value="Buy at NRP 28,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/axel.webp">
+      <h2>
+        Classique Axel - 8002B-XBKA
+      </h2>
+      <p style="display: none;">Bold timepiece blending modern design with functionality. Features a
+        sleek black
+        dial and hands for readability. Housed in a stainless steel case, it’s
+        complemented by a durable black leather strap. Powered by a quartz movement.
+      </p>
+      <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>1,90,000</strike></h4>
+      <input type="button" value="Buy at NRP 1,87,500"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/laura_swiss.webp">
+      <h2>
+        Laura Swiss Quartz Watch
+      </h2>
+      <p style="display: none;">Elegant timepiece that combines timeless design with Swiss precision.
+        Featuring a
+        polished stainless steel case and, it’s powered by
+        Swiss
+        quartz movement for accurate timekeeping. Paired with a stylish leather or metal strap for
+        everyday looks.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>41,500</strike></h4>
+      <input type="button" value="Buy at NRP 45,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/leonardo_gold.webp">
+      <h2>
+        Leonardo Gold Plated Watch
+      </h2>
+      <p style="display: none;">Luxurious timepiece that blends elegance with classic design. Features a
+        gleaming
+        gold-plated stainless steel case and refined dial, hands for easy
+        readability, and reliable quartz movement, it is perfect for formal events.
+      </p>
+      <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>39,000</strike></h4>
+      <input type="button" value="Buy at NRP 37,500"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/aviator.webp">
+      <h2>
+        Aviator - 8000W-XKK2
+      </h2>
+      <p style="display: none;">Rugged, stylish timepiece for performance. Featuring a bold,
+        aviation-inspired dial with clear markers and hands, housed in a durable stainless steel
+        case. Powered by a precise quartz movement, it offers reliable timekeeping, ideal for durability.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>3,00,000</strike></h4>
+      <input type="button" value="Buy at NRP 2,85,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+  </div>
+
+  <h1>
+    Digital Watches
+  </h1>
+
+  <div class="container"><!--this div contains all digital watches products-->
+
+    <div class="watch">
+      <img src="../Images/Product_images/apple10.png">
+      <h2>
+        Apple Watch Series 10
+      </h2>
+      <p style="display: none;">Blends advanced health features with sleek design.
+        Always-on Retina display, enhanced sensors for heart rate, ECG, blood oxygen,
+        With watchOS, it offers seamless iPhone integration and improved battery life.
+      </p>
+      <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>68,000</strike></h4><!--the strike tag cuts the text-->
+      <input type="button" value="Buy at NRP 62,482"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/apple9.png">
+      <h2>
+        Apple Watch Series 9
+      </h2>
+      <p style="display: none;">TRefines previous models with a sleek design and always-on Retina display that is
+        more energy-efficient. Powered by the new S9 chip, it offers faster performance and better battery life.
+        advanced
+        health sensors for heart rate and improved sleep tracking.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+        <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>45,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 41,299"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy7.png">
+      <h2>
+        Samsung Galaxy Series 7
+      </h2>
+      <p style="display: none;">Stylish design and advanced functionality with a sleek, curved Super
+        AMOLED
+        display. Durable build and available in stainless steel or aluminum.
+        Powered by Wear OS, it integrates seamlessly with Samsung and Android devices.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>36,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 34,499"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy6.png">
+      <h2>
+        Samsung Galaxy Series 6
+      </h2>
+      <p style="display: none;">Sleek, versatile design with a vibrant Super AMOLED display for clear
+        visibility.
+        modern build comes in stainless steel or aluminum. Powered by Wear OS, it ensures smooth integration
+        with
+        Samsung and Android devices.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>34,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 33,000"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy5.png">
+      <h2>
+        Samsung Galaxy Series 5
+      </h2>
+      <p style="display: none;">Sleek, powerful smartwatch with a durable build and vibrant Super AMOLED
+        display. Powered by Wear OS, it offers a smooth, responsive experience and seamlessly pairs with
+        Samsung
+        and Android devices.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>32,128</strike></h4>
+
+      <input type="button" value="Buy at NRP 29,999"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/galaxy4.png">
+      <h2>
+        Samsung Galaxy Series 4
+      </h2>
+      <p style="display: none;">Sleek, feature-packed smartwatch with a vibrant Super AMOLED display for clear
+        visuals.
+        Powered by Wear OS, it offers seamless integration with Android and Samsung devices, supports
+        many
+        apps for
+        fitness, productivity, communication and many more.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>28,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 25,464"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/victor2.png">
+      <h2>
+        Noise ColorFit Victor 2
+      </h2>
+      <p style="display: none;">Budget-friendly smartwatch designed for fitness enthusiasts and tech-savvy
+        users.
+        features a vibrant, full-touch display. The watch offers comprehensive fitness
+        tracking,
+        including heart rate monitoring, sleep tracking and many more.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>3,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 2,499"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/ULTIMA.webp">
+      <h2>
+        Ultima Watch Flex - Fitness watch
+      </h2>
+      <p style="display: none;">Versatile fitness watch designed to track your health and fitness goals. Features
+        a sleek
+        design with a clear display. The watch offers essential fitness
+        tracking,
+        including heart rate monitoring, step counting, calorie tracking and many more.</p>
+        <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>5,500</strike></h4>
+
+      <input type="button" value="Buy at NRP 4,100"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+    <div class="watch">
+      <img src="../Images/Product_images/cmf.webp">
+      <h2>
+        CMF WatchPro 2 - Health Companion
+      </h2>
+      <p style="display: none;">Health-focused smartwatch designed to track your overall well-being. Features a
+        sleek design
+        with a
+        clear display. Packed with health-monitoring features, including heart
+        rate
+        monitoring, SpO2 tracking and many more.
+      </p>
+      <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>20,000</strike></h4>
+
+      <input type="button" value="Buy at NRP 18,400"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+
+
+    <div class="watch">
+      <img src="../Images/Product_images/aura3.webp">
+      <h2>
+        HiFuture Aura Smartwatch
+      </h2>
+      <p style="display: none;">Feature-packed wearable designed to keep you connected and
+        motivated.
+        Features a vibrant touchscreen display. The watch offers
+        fitness
+        tracking, including heart rate monitoring, sleep analysis, and multiple workout modes.
+      </p>
+      <button class="viewbtn" onclick="descriptionToggle(this)">View More</button>
+      <p>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="filled_star">&#9733;</span>
+        <span class="unfilled_star">&#9733;</span>
+      </p>
+      <h4>NRP <strike>22,500</strike></h4>
+      <input type="button" value="Buy at NRP 19,200"
+        onclick="buy_product(this)"><!--this keyword represents the clicked button-->
+      >
+    </div>
+  </div>
+  <div class="feedback">
+    <h2>Review a watch</h2>
+    <label class="review_h1">Choose a watch:</label>
+    <select class="drop_down" id="drop_down">
+        <option value="" disabled selected>Select a watch</option>
+        <option value="Casio A168WEGB-1B">Casio A168WEGB-1B</option>
+        <option value="Gorkha Urban Chloro Black Dia">Gorkha Urban Chloro Black Dial</option>
+        <option value="Cartier Ronde Louis Rose">Cartier Ronde Louis Rose</option>
+        <option value="Classique Swiss Watch - 0436GFLEXI">Classique Swiss Watch - 0436GFLEXI</option>
+        <option value="Classique Lincoln Watch">Classique Lincoln Watch</option>
+        <option value="Classique Theo Watch">Classique Theo Watch</option>
+        <option value="Classique Axel - 8002B-XBKA">Classique Axel - 8002B-XBKA</option>
+        <option value="Laura Swiss Quartz Watch">Laura Swiss Quartz Watch</option>
+        <option value="Leonardo Gold Plated Watch">Leonardo Gold Plated Watch</option>
+        <option value="Aviator - 8000W-XKK2">Aviator - 8000W-XKK2</option>
+        <option value="Apple Watch Series 10">Apple Watch Series 10</option>
+        <option value="Apple Watch Series 9">Apple Watch Series 9</option>
+        <option value="Samsung Galaxy Series 7">Samsung Galaxy Series 7</option>
+        <option value="Samsung Galaxy Series 6">Samsung Galaxy Series 6</option>
+        <option value="Samsung Galaxy Series 5">Samsung Galaxy Series 5</option>
+        <option value="Samsung Galaxy Series 4">Samsung Galaxy Series 4</option>
+        <option value="Noise ColorFit Victor 2">Noise ColorFit Victor 2</option>
+        <option value="Ultima Watch Flex - Fitness watch">Ultima Watch Flex - Fitness watch</option>
+        <option value="CMF WatchPro 2 - Health Companion">CMF WatchPro 2 - Health Companion</option>
+        <option value="HiFuture Aura Smartwatch">HiFuture Aura Smartwatch</option>
+    </select>
+    <label class="review_h2" >Write your review here</label>
+    <textarea class="review_text_area" id="review_text_area" placeholder="your review..."></textarea>
+    <button onclick="review()"class="review_sbt" id="review_btn">Submit</button>
+  </div>
+  <button class="review_toggle" onclick="review_toggle(this)">Open Review Box</button>
+  <footer>
+    <p>&copy; Phoenix 2025. All rights reserved.</p>
+  </footer>
+  <script>
+    function descriptionToggle(button){
+      const details = button.previousElementSibling;
+      if(details.style.display === "none"){
+        details.style.display = "block"
+        button.textContent = "View Less"
+      }
+      else{
+        details.style.display = "none"
+        button.textContent = "View More"
+      }
+    }
+    function review_toggle(button){
+      const status = button.previousElementSibling;
+      if(status.style.display === "none"){
+        status.style.display = "flex"
+        button.textContent = "Close Review Box"
+      }
+      else{
+        status.style.display = "none"
+        button.textContent = "Open Review Box"
+      }
+    }
+    function review(){
+    if(document.getElementById('review_text_area').value === ""){
+      alert("Please write something")
+    }
+    else if(document.getElementById('drop_down').value == ""){
+      alert("Plesae select a watch")
+    }
+    else{
+      alert("Thank you for your review")
+    }
+    }
+  </script>
+  <script src="../script/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+/*header section*/
+.logo{
+    height:90px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+}
+
+header a{
+    text-decoration: none;
+    color: inherit; /*inherit the color from the parent element instead of default*/
+}
+header a:hover{
+    color:#eaa844;
+}
+/*ul tag inside header tag*/
+header ul{
+    display:flex;
+    list-style: none; /*no bullets*/
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    align-items:center;
+}
+header ul li{
+    margin:0 50px 0 50px ; /*margin to the left*/
+}
+
+header input{
+    background-color: #b49363;
+    padding:8px;
+    border: solid 0;
+    border-radius:25px;
+    font-weight: bold;
+    font-family:sans-serif;
+    cursor:pointer;
+}
+header input:hover{
+    background-color: #c49044;
+}
+/*end of header section*/
+
+/*body*/
+body{
+    background: black;
+    overflow-x: hidden;
+}
+
+/*customization of scrollbar*/
+body::-webkit-scrollbar {
+    background: none;
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background:#b49363;
+    border-radius: 20px;
+    top:0;
+    bottom:0;
+    height:50%;
+}
+/*end of body*/
+
+/*footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*end of footer*/
+
+
+/*Blog section*/
+ .blogs {
+    display: flex;
+    /*make layout flexible, making alignment, size, direction more flexible to design*/
+    justify-content: space-evenly;
+    /*it is an alignment property that puts equal space between and around the contents*/
+}
+
+/*styling the blog boxes or containers*/
+.blog {
+    box-shadow: 5px 5px 5px 5px rgb(19, 19, 19);
+    /*put shadow around the box: 5px horizontal offset, 5px vertical offset, 5px blur radius, 5px spread radius and the color*/
+    width: 500px;
+    display: flex;
+    /*make layout flexible, making alignment, size, direction more flexible to design*/
+    flex-direction: column;
+    /*arrange the items in column*/
+    align-items: center;
+    /*align the items in center vertically*/
+    border-radius: 20px;
+    padding: 10px;
+    /*gap between the container border and the text inside*/
+}
+
+/*styling the image inside the blox boxes*/
+.blog img {
+    height: 200px;
+    border-radius: 20px;
+    /*roundness of border corner*/
+    cursor: pointer;
+    /*cursor turns pointer when hovered*/
+}
+
+/*Styling the heading/title of blogs*/
+.blog h2 {
+    color: #e0cb98;
+    font-size: 25px;
+    text-align: center;
+    /*align text to the center*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Styling the text mentioning the source of the blog*/
+.blog h3 {
+    color: #faefd5;
+    text-align: center;
+    /*align text to the center*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Styling the text that mentions some part of the blog content*/
+.blog p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    /*align text to the center*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Styling the Read More button of the blog*/
+.blog input {
+    background: #e0cb98;
+    padding: 12px;
+    /*gap between the container border and the text inside*/
+    border-radius: 25px;
+    /*roundness of border corner*/
+    font-weight: bold;
+    /*make text bold*/
+    font-family: sans-serif;
+    font-size: 15px;
+    border: none;
+    /*No visible border*/
+    cursor: pointer;
+    /*cursor turns pointer when hovered*/
+}
+
+
+/*Blog content page*/
+.wrapper{
+    box-shadow: 0px 0px 5px 10px rgb(19, 19, 19);
+    /*put shadow around the box: 0 horizontal offset, 0 vertical offset, 5px blur radius, 10px spread radius and the color*/
+    width:80%;
+    margin:auto auto;
+}
+.title{
+    color: #e0cb98;
+    font-size: 25px;
+    text-align: center;
+    /*align text to the center*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    /*align text to the center*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.author{
+    color: #faefd5;
+    text-align: center;
+    /*align text to the center*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*Portfolio*/
+
+.container_box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin: auto;
+    border-radius: 25px;
+    width: 1250px;
+    height: 800px;
+    box-shadow: 0px 0px 5px 10px rgb(19, 19, 19);
+    /*put shadow around the box: 0 horizontal offset, 0 vertical offset, 5px blur radius, 10px spread radius and the color*/
+    color: white;
+}
+
+.container_box img {
+    border: 8px solid #9a7a50;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 75px 0px 0px 60px;
+    object-fit: cover;
+}
+
+.intro {
+    padding: 10px 10px;
+    margin: 120px 0px 10px 130px;
+    width: 700px;
+}
+
+.qualification {
+    margin-left: 75px;
+    width: 1250px;
+    height: 120px;
+}
+
+.skills {
+    margin-left: 75px;
+    width: 1250px;
+    height: 120px;
+}
