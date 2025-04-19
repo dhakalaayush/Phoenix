@@ -1,0 +1,1 @@
+Phoenix is a group project from us students of Islington College. I, being the leader of the group, guided us on how to implement the website. Phoenix is a sample e-commerce website that retails watches.
